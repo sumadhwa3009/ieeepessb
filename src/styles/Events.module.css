@@ -1,0 +1,136 @@
+/* Section Wrapper */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Upcoming Event Cards */
+.event-card {
+  padding: 2rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.event-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent-color);
+}
+
+.event-card .event-date {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+}
+
+.event-card p {
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+
+/* Past Events */
+.past-event-card {
+  padding: 1.8rem;
+  border-radius: 12px;
+  background: rgba(7, 7, 7, 0.05);
+  border: 1px solid rgba(21, 21, 21, 0.15);
+  backdrop-filter: blur(6px);
+  color: var(--accent-color);
+  box-shadow: 0 3px 10px rgba(18, 18, 18, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.past-event-card:hover {
+  transform: translateY(-4px);
+}
+
+.past-event-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.past-event-card .event-date {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+}
+
+.past-event-card p {
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 0.6rem;
+  color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 5rem 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1.2rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .section {
+    padding: 2rem 1rem;
+  }
+}

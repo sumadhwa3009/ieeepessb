@@ -1,0 +1,104 @@
+:root {
+  --primary-color: #00629b; /* IEEE Blue */
+  --secondary-color: #2e7d32; /* PES Green */
+  --accent-color: #00bfa5;
+
+  --text-color: #666666;
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.22);
+
+  --bg-start: #0f2027;
+  --bg-mid: #203a43;
+  --bg-end: #2c5364;
+
+  --radius-lg: 22px;
+  --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+/* ================================
+   🌟 Global Hero Styles
+   ================================ */
+
+/* Global Small Hero Section */
+.small-hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-color)
+  );
+  color: rgb(252, 252, 252);
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.small-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.small-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ================================
+   🌟 Global Button Styles
+   ================================ */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+  border: none;
+  background: var(--accent-color, #0073e6);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 115, 230, 0.3);
+}
+
+.btn:hover {
+  background: #005bb5;
+  box-shadow: 0 6px 18px rgba(0, 91, 181, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Outline Variant */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent-color, #0073e6);
+  color: var(--accent-color, #0073e6);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--accent-color, #0073e6);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 115, 230, 0.35);
+}
+
+/* 🌍 Responsive */
+@media (max-width: 500px) {
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}

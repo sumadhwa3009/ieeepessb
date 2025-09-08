@@ -1,0 +1,108 @@
+/* Hero (reuse global .hero but smaller variant) */
+
+/* Section Layouts */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.two-column {
+  display: flex;
+  margin: 2rem, auto;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+}
+
+.text-block {
+  flex: 1 1 50%;
+}
+
+.text-block p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.image-block {
+  flex: 1 1 40%;
+}
+
+.image-block img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Core Values Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.glass-card h3 {
+  margin-bottom: 0.8rem;
+  color: var(--color-accent, #00bfa5);
+  font-size: 1.4rem;
+}
+
+.text-muted {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary, #00629b);
+  font-weight: 700;
+}
+
+/* 🌍 Responsive */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .text-block {
+    flex: 1 1 100%;
+  }
+
+  .image-block {
+    flex: 1 1 100%;
+  }
+
+  .small-hero h1 {
+    font-size: 2rem;
+  }
+  .small-hero p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,200 @@
+/* Hero Section - Fullscreen */
+.hero {
+  height: 97vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  background: linear-gradient(rgba(0, 51, 102, 0.25), rgba(0, 51, 102, 0.9)),
+    url("../assets/images/energy-bg.png") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 0 2rem; /* horizontal padding */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Highlights Grid */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Card (glass) styling — applied to the module `card` class you already use in JSX */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border-radius: 18px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Titles & text inside card */
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--accent-color); /* matches globals.css var name */
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  flex-grow: 1;
+}
+
+/* Button spacing: keep using your existing global .btn / .btn-outline classes.
+   If those don't exist, you can style them here or switch to module classes. */
+
+/* 🌍 Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 5rem 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1.2rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .highlights {
+    padding: 3rem 1.5rem;
+  }
+  .card {
+    padding: 1.5rem;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .hero-btn {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+  }
+  .highlights {
+    gap: 1.2rem;
+    padding: 2rem 1rem;
+  }
+}
+
+/* Why Join Section */
+.whyJoin {
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 1150px;
+  margin: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  margin-bottom: 2.5rem;
+}
+
+.whyJoin h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.whyJoin p {
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.reasonsGrid div {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.reasonsGrid h4 {
+  color: var(--primary-color);
+}
+
+/* Quick Stats Section */
+.statsSection {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 4rem 2rem;
+  background: var(--background-alt, #0a1a2f);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  text-align: center;
+}
+
+.statCard h2 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.statCard p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .whyJoin h2 {
+    font-size: 1.8rem;
+  }
+  .statCard h2 {
+    font-size: 2rem;
+  }
+}
