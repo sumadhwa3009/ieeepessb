@@ -1,14 +1,18 @@
 // Import all images correctly
-import facultyPic from "../assets/images/profile-pic.jpg";
-//import chairPic from "../assets/images/profile-picture.jpg";
-//import vicePic from "../assets/images/profile-picture.jpg";
-//import secretaryPic from "../assets/images/profile-picture.jpg";
-//import treasurerPic from "../assets/images/profile-picture.jpg";
+import facultyPic from "../../public/team/faculty.jpg";
+import chairPic from "../../public/team/chair.jpg";
+import vicePic from "../../public/team/vice_chair.jpg";
+import secretaryPic from "../../public/team/secretary.jpg";
+import treasurerPic from "../../public/team/treasurer.jpg";
+import randdheadPic from "../../public/team/r_and_d.jpg";
+import webmasterPic from "../../public/team/web_master.jpg";
+import eventheadPic from "../../public/team/event_head.jpg";
+import mediaheadPic from "../../public/team/media.jpg";
 
 const teamData = {
   facultyAdvisor: [
     {
-      name: "Dr. John Smith",
+      name: "DR. SUMA UMESH",
       role: "Faculty Advisor",
       image: facultyPic,
       socials: {
@@ -19,72 +23,72 @@ const teamData = {
   ],
   executiveCommittee: [
     {
-      name: "Alice Johnson",
+      name: "ROHAN",
       role: "Chair",
-      image: "",
+      image: chairPic,
       socials: {
         linkedin: "#",
         instagram: "#",
       },
     },
     {
-      name: "Michael Brown",
+      name: "MEHAK R SHASHIDAR",
       role: "Vice Chair",
-      image: "",
+      image: vicePic,
       socials: {
         linkedin: "#",
         instagram: "#",
       },
     },
     {
-      name: "Sophia Lee",
+      name: "Manu Athreya",
       role: "Secretary",
-      image: "",
+      image: secretaryPic,
       socials: {
         linkedin: "#",
         instagram: "#",
       },
     },
     {
-      name: "David Wilson",
+      name: "CHETAN GOWDA",
       role: "Treasurer",
-      image: "",
+      image: treasurerPic,
       socials: {
         linkedin: "#",
         instagram: "#",
       },
     },
     {
-      name: "Cimron Minney",
+      name: "AJAY D BHAT",
       role: "R and D Head",
-      image: "",
+      image: randdheadPic,
       socials: {
         linkedin: "#",
         instagram: "#",
       },
     },
     {
-      name: "Bruce Lee",
+      name: "SUMADHWA V",
       role: "Web Master",
-      image: "",
+      image: webmasterPic,
       socials: {
         linkedin: "#",
         instagram: "#",
       },
     },
     {
-      name: "Peter Jay",
+      name: "NITHIN SHETTY L",
       role: "Event Head",
-      image: "",
+      image: eventheadPic,
       socials: {
         linkedin: "#",
         instagram: "#",
       },
     },
     {
-      name: "Joseph John",
+      name: "BHARGAV M V",
       role: "Media Head",
-      image: "",
+      image: mediaheadPic,
       socials: {
         linkedin: "#",
         instagram: "#",

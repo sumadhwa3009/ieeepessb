@@ -24,7 +24,7 @@ export default function About() {
           </p>
         </div>
         <div className={styles["image-block"]}>
-          <img src="../assets/pes-students.jpg" alt="IEEE PES Students" />
+          <img src="images\homepage-icon-join.png" alt="IEEE PES Students" />
         </div>
       </section>
 

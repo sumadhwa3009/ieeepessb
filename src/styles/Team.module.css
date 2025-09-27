@@ -75,8 +75,8 @@
 /* Photo Wrapper with Gradient Ring */
 /* Photo Wrapper with Glowing Gradient Halo */
 .photo-wrapper {
-  width: 140px;
-  height: 140px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
   padding: 5px;
@@ -103,7 +103,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3); /* soft transparent border for separation */
+  /*border: 2px solid rgba(255, 255, 255, 0.3); soft transparent border for separation */
 }
 
 /*.team-card:hover .photo-wrapper {
@@ -130,6 +130,7 @@
   margin: 0.6rem 0;
   color: var(--heading-color);
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .team-card p {
@@ -177,7 +178,7 @@
   }
 
   .photo-wrapper {
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
   }
 }

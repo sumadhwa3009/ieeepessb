@@ -1,32 +1,63 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const [scrollUp, setScrollUp] = useState(false); // <-- added state
+  let lastScroll = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll < lastScroll) {
+        setScrollUp(true); // scrolling up
+      } else {
+        setScrollUp(false); // scrolling down
+      }
+
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <h1>Welcome to IEEE PES</h1>
+      <section
+        className={`${styles.hero} ${scrollUp ? styles["scroll-up"] : ""}`}
+      >
+        <img src="../../images/ieee-pes-logo.png" alt="pes_logo" />
+        <h1>
+          IEEE POWER AND ENERGY SOCIETY <br />
+        </h1>
         <p>
-          Advancing technology for humanity with a strong focus on power,
-          energy, and sustainability.
+          PES Student Branch Chapter is more than just a community - it's a
+          platform to learn, <br />
+          lead and create meaningful impact in the power and energy domain.
         </p>
         <a href="#highlights" className="btn btn-outline">
           Learn More
         </a>
       </section>
 
+      {/* ...rest remains exactly the same */}
+
       {/* Highlights Section */}
       <section id="highlights" className={styles.highlights}>
         <div className={`card glass ${styles.card}`}>
-          <h3>Our Mission</h3>
+          <h3>About the Chapter</h3>
           <p>
-            We aim to foster innovation in power and energy, empowering students
-            and professionals to build a sustainable tomorrow.
+            PES Student Branch Chapter nurtures young minds with knowledge,
+            skills, and experiences beyond the classroom.
           </p>
-          <Link to="/events" className="btn btn-outline">
-            Explore Events
+          <Link to="/about" className="btn btn-outline">
+            Explore More
           </Link>
         </div>
 
@@ -44,7 +75,7 @@ export default function Home() {
         <div className={`card glass ${styles.card}`}>
           <h3>Contact Us</h3>
           <p>
-            Have ideas or questions? Reach out for collaborations, partnerships,
+            Have ideas or questions? Reach out for collaborations, partnerships
             or student support.
           </p>
           <Link to="/contact" className="btn btn-outline">
@@ -81,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* Quick Stats */}
-      <section className={styles.statsSection}>
+      {/*<section className={styles.statsSection}>
         <div className={styles.statCard}>
           <h2>200+</h2>
           <p>Student Members</p>
@@ -94,7 +125,7 @@ export default function Home() {
           <h2>10+</h2>
           <p>Industry Collaborations</p>
         </div>
-      </section>
+      </section>*/}
     </div>
   );
 }

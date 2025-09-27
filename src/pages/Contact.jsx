@@ -24,17 +24,18 @@ export default function Contact() {
               <i className="fas fa-university"></i> IEEE PES Student Branch
             </p>
             <p>
-              <i className="fas fa-map-marker-alt"></i> ABC Institute of
-              Technology, Bengaluru, India
+              <i className="fas fa-map-marker-alt"></i> BMS Institute of
+              Technology & Management, <br />
+              Avalahalli, Doddaballapura Road, <br />
+              Yelahanka, Bengaluru - 560064
             </p>
             <p>
-              <i className="fas fa-envelope"></i> pesbranch@ieee.org
+              <a href="mailto:ieeepes.bmsit@gmail.com">
+                <i className="fas fa-envelope"></i> ieeepes.bmsit@gmail.com
+              </a>
             </p>
             <p>
-              <i className="fas fa-phone"></i> +91 98765 43210
-            </p>
-            <p>
-              <i className="fas fa-clock"></i> Mon - Fri, 9 AM - 5 PM
+              <i className="fas fa-phone"></i> +91 91136 79843
             </p>
           </div>
 
@@ -53,7 +54,7 @@ export default function Contact() {
         <div className={styles.rightColumn}>
           <div className={`${styles.contactCard} ${styles.formCard}`}>
             <h2>Send us a Message</h2>
-            <form>
+            <form autoComplete="false" method="GET">
               <input type="text" placeholder="Your Name" required />
               <input type="email" placeholder="Your Email" required />
               <textarea placeholder="Your Message" rows="6" required></textarea>

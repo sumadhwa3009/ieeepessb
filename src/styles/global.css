@@ -1,46 +1,53 @@
 :root {
-  --primary-color: #00629b; /* IEEE Blue */
-  --secondary-color: #2e7d32; /* PES Green */
-  --accent-color: #00bfa5;
+  --nav-color: rgba(255, 255, 255, 0.1); /* Semi-dark glass navbar */
+  --primary-color: #00629bcc; /* IEEE Blue #1e88e5*/
+  --secondary-color: #43a047; /* PES Green #2e7d32*/
+  --accent-color: #ffb300; /*#2e7d32*/
 
-  --text-color: #666666;
-  --glass-bg: rgba(255, 255, 255, 0.12);
-  --glass-border: rgba(255, 255, 255, 0.22);
+  --text-color: #222222; /* Almost black for good contrast */
+  --text-color1: #fff;
 
-  --bg-start: #0f2027;
-  --bg-mid: #203a43;
-  --bg-end: #2c5364;
+  /*background*/
+  --bg-color: #d0d8e2; /* Soft gray-blue background */
+  /*--bg-color: radial-gradient(
+    circle 20rem,
+    var(--primary-color),
+    var(--bg-color1)
+  );*/
 
-  --radius-lg: 22px;
-  --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.35);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+
+  --radius-lg: 20px;
+  --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: #f5f6fa;
-  color: #222;
+  background: var(--bg-color); /*#f5f6fa*/
+  color: var(--text-color);
 }
 
-/* ================================
-   🌟 Global Hero Styles
-   ================================ */
+/*Global Hero Styles
 
-/* Global Small Hero Section */
+ Global Small Hero Section */
 .small-hero {
   background: linear-gradient(
     135deg,
     var(--primary-color),
-    var(--primary-color)
+    var(--secondary-color)
   );
-  color: rgb(252, 252, 252);
-  padding: 4rem 2rem;
+  color: var(--text-color1);
+  padding: 8rem 2rem;
   text-align: center;
+  align-items: center;
   margin-bottom: 3rem;
 }
 
@@ -55,9 +62,7 @@ body {
   opacity: 0.9;
 }
 
-/* ================================
-   🌟 Global Button Styles
-   ================================ */
+/*Global Button Styles */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
@@ -95,7 +100,7 @@ body {
   box-shadow: 0 6px 18px rgba(0, 115, 230, 0.35);
 }
 
-/* 🌍 Responsive */
+/* Responsive */
 @media (max-width: 500px) {
   .btn {
     padding: 0.6rem 1.2rem;

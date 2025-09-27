@@ -3,17 +3,43 @@ import styles from "../styles/Footer.module.css";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className={styles.footer}>
-      <div className="container">
-        <p>© {year} PES Club. All rights reserved.</p>
+    <footer>
+      <div className={styles.footer}>
+        <div className={styles.socials}>
+          <h4>Social</h4>
+          <a
+            href="https://www.linkedin.com/company/ieee-pes-bmsit/"
+            target="_blank"
+          >
+            <i className="fab fa-linkedin"></i>/PES SBC
+          </a>
+          <a href="https://tinyurl.com/df6wvawb" target="_blank">
+            <i className="fab fa-instagram"></i>/ PES SBC
+          </a>
+        </div>
+        <div className={styles.fcontact}>
+          <h4>Contact</h4>
+          <p>
+            Email:{" "}
+            <a href="mailto:ieeepes.bmsit@gmail.com">ieeepes.bmsit@gmail.com</a>
+          </p>
+          <p>
+            Mobile: <a href="tel:+919113679843">+91 9113679843</a>
+          </p>
+        </div>
+        <div className={styles.faddress}>
+          <h4>Address</h4>
+          <p>
+            BMS Institute Of Technology and Management
+            <br />
+            Avalahalli, Doddaballapura Road <br />
+            Yelahanka, Bengaluru - 560064
+          </p>
+        </div>
       </div>
-      <div className={styles.socials}>
-        <a href="#">
-          <i className="fab fa-linkedin"></i>
-        </a>
-        <a href="#">
-          <i className="fab fa-instagram"></i>
-        </a>
+      <div className={styles.footerCopyright}>
+        <p>© {year} PES Club, Web Development Team</p>
+        <p>All rights Reserved</p>
       </div>
     </footer>
   );
