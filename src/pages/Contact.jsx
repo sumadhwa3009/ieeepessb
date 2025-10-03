@@ -1,6 +1,33 @@
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 import styles from "../styles/Contact.module.css";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_3ryxttr", //Service ID from EmailJS
+        "template_6avgn25", //Template ID from EmailJS
+        form.current,
+        "acl3AelyS7CDTvi-b" //Public Key from EmailJS
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("✅ Message sent successfully!");
+          form.current.reset(); // clear form after submission
+        },
+        (error) => {
+          console.log(error.text);
+          alert("❌ Failed to send message. Please try again later.");
+        }
+      );
+  };
+
   return (
     <main>
       {/* Hero Section */}
@@ -8,7 +35,7 @@ export default function Contact() {
         <div className="hero-content">
           <h1>Get in Touch</h1>
           <p>
-            We’d love to hear from you! Reach out for any queries,
+            We'd love to hear from you! Reach out for any queries,
             collaborations, or support.
           </p>
         </div>
@@ -26,8 +53,8 @@ export default function Contact() {
             <p>
               <i className="fas fa-map-marker-alt"></i> BMS Institute of
               Technology & Management, <br />
-              Avalahalli, Doddaballapura Road, <br />
-              Yelahanka, Bengaluru - 560064
+              Avalahalli, Doddaballapura Main Road, <br />
+              Avalahalli, Bengaluru - 560064
             </p>
             <p>
               <a href="mailto:ieeepes.bmsit@gmail.com">
@@ -35,7 +62,7 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <i className="fas fa-phone"></i> +91 91136 79843
+              <i className="fas fa-phone"></i> +91 9113679843
             </p>
           </div>
 
@@ -54,10 +81,25 @@ export default function Contact() {
         <div className={styles.rightColumn}>
           <div className={`${styles.contactCard} ${styles.formCard}`}>
             <h2>Send us a Message</h2>
-            <form autoComplete="false" method="GET">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" rows="6" required></textarea>
+            <form ref={form} onSubmit={sendEmail} autoComplete="off">
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                required
+              ></textarea>
               <button type="submit" className="btn btn-outline">
                 Send Message
               </button>
