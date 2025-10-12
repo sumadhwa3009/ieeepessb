@@ -1,12 +1,10 @@
-// src/data/teamData.js
-
-// Dynamically import all team images from src/assets/team
+// import all team images from src/assets/team
 const teamImages = import.meta.glob("../assets/team/*.jpg", {
   eager: true,
   as: "url",
 });
 
-// Helper function to get image URL by filename
+//function to get image URL by filename
 const getImage = (filename) => teamImages[`../assets/team/${filename}`];
 
 const teamData = {

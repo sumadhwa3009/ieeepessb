@@ -24,7 +24,14 @@ export default function Footer() {
             <a href="mailto:ieeepes.bmsit@gmail.com">ieeepes.bmsit@gmail.com</a>
           </p>
           <p>
-            Mobile: <a href="tel:+919113679843">+91 9113679843</a>
+            Mobile: {"\u00A0"}
+            <a href="tel:+918747004877"> +91 8747004877</a> (Chair)
+            <br />
+            {"\u2003"}
+            {"\u2003"}
+            {"\u2003"}
+            {"\u2003"}
+            <a href="tel:+918296098776">+91 8296098776</a> (Secretary)
           </p>
         </div>
         <div className={styles.faddress}>

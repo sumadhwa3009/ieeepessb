@@ -83,7 +83,7 @@
   font-weight: 700;
 }
 
-/* 🌍 Responsive */
+/*Responsive */
 @media (max-width: 768px) {
   .two-column {
     flex-direction: column;
