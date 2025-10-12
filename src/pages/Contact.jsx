@@ -18,12 +18,12 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          alert("✅ Message sent successfully!");
+          alert("Message sent successfully!");
           form.current.reset(); // clear form after submission
         },
         (error) => {
           console.log(error.text);
-          alert("❌ Failed to send message. Please try again later.");
+          alert("Failed to send message. Please try again later.");
         }
       );
   };
@@ -62,14 +62,16 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <i className="fas fa-phone"></i> +91 9113679843
+              <a href="tel:+918747004877">
+                <i className="fas fa-phone"></i> +91 8747004877
+              </a>
             </p>
           </div>
 
           <div className={`${styles.contactCard} ${styles.mapCard}`}>
             <h2>Locate Us</h2>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.959180833409!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9f84e29%3A0xdeeaa16c0f7e9d1!2sBengaluru!5e0!3m2!1sen!2sin!4v1611123456789"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.446884438973!2d77.56681777484434!3d13.134187587196273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae18a5c54ece35%3A0x49c4c47a68a60b9c!2sBMS%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin!4v1759651620007!5m2!1sen!2sin"
               loading="lazy"
               allowFullScreen=""
               title="Google Map"
