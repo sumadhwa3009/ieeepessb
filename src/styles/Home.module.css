@@ -13,8 +13,8 @@
 }
 
 .hero.scroll-up {
-  transform: scale(1.05); /* slight zoom */
-  filter: brightness(1.2); /* optional highlight effect */
+  transform: scale(1.03); /* slight zoom */
+  filter: brightness(0.9); /* optional highlight effect */
 }
 
 .hero img {

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ieee-pes-sb.web.app/sitemap.xml
