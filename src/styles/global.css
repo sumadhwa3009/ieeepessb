@@ -45,16 +45,22 @@ body {
     var(--secondary-color)
   );
   color: var(--text-color1);
-  padding: 8rem 2rem;
+  padding: 7rem 2rem; /* reduced from 8rem */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
+  min-height: 40vh; /* ensures proper centering */
+  margin-bottom: 1rem;
 }
 
 .small-hero h1 {
   font-size: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 0.8rem;
   font-weight: 700;
+  color: var(--text-color1);
 }
 
 .small-hero p {

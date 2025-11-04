@@ -14,7 +14,7 @@
 
 .hero.scroll-up {
   transform: scale(1.03); /* slight zoom */
-  filter: brightness(0.9); /* optional highlight effect */
+  filter: brightness(1.1);
 }
 
 .hero img {
@@ -27,10 +27,13 @@
   margin-bottom: 2.5rem;
   font-family: "Ubuntu", serif;
   font-weight: 600;
+  color: var(--text-color1);
 }
 
 .hero p {
   font-size: 1.2rem;
+  text-align: center;
+  text-wrap: wrap;
   margin-bottom: 2.5rem;
 }
 
