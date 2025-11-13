@@ -8,6 +8,30 @@ import imageCompression from "browser-image-compression";
 
 export default function MemberRegistration() {
   const navigate = useNavigate();
+  const FORM_OPEN = false;  // set to FALSE to stop entries or TRUE to enable form entries
+
+  if (!FORM_OPEN) {
+    return (
+      <main className={styles.closedWrapper}>
+        <section className="hero small-hero">
+        <div className="hero-content">
+          <h1>Member Registration</h1>
+          <p>Join the IEEE PES Student Branch Chapter today!</p>
+        </div>
+      </section>
+
+        <div className={styles.closedMessage}>
+          <h2>🔒 Registration Closed</h2>
+          <p>
+            Thank you for your interest! Registration for this cycle has now been
+            closed. Please check back here soon.
+          </p>
+        </div>
+      </main>
+    );
+  }
+
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -57,7 +81,7 @@ export default function MemberRegistration() {
     return result.secure_url;
   };
 
-  // 🔹 Function that shows the preview popup
+  // Function that shows the preview popup
   const handlePreview = (e) => {
     e.preventDefault();
     if (!formData.photo) {
@@ -67,7 +91,7 @@ export default function MemberRegistration() {
     setShowPreview(true);
   };
 
-  // Final submit logic (same as your handleSubmit)
+  // Final submit logic
   const handleFinalSubmit = async () => {
     setIsSubmitting(true);
     setShowPreview(false);
@@ -302,7 +326,7 @@ export default function MemberRegistration() {
           </form>
         </div>
 
-        {/* 🔹 Preview Popup */}
+        {/*Preview Popup */}
         {showPreview && (
           <div className={styles.modalOverlay}>
             <div className={styles.modal}>

@@ -17,33 +17,42 @@
 }
 
 /* Grid Layout */
-.team-grid {
+/*.team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.5rem;
   justify-content: center;
   align-items: stretch;
+}*/
+.team-grid {
+  display: flex;            /* switch to flexbox */
+  flex-wrap: wrap;         /* allow wrapping into rows */
+  gap: 2rem;             /* spacing between cards (matches your current gap) */
+  justify-content: center; /* CENTER rows and the last partial row */
+  align-items: flex-start; /* align cards at top of each row */
+  /* optional: keep max width behavior from container if any */
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* Team Card */
 .team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: rgba(255, 255, 255, 0.08);
+  padding: 2.5rem 0rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   color: var(--accent-color);
   text-transform: uppercase;
   backdrop-filter: blur(14px);
   border-radius: 1.2rem;
-  padding: 2.5rem 2rem;
+  flex: 0 1 340px;
   text-align: center;
   perspective: 1000px;
   opacity: 0; /* hidden until animation */
   transform: translateY(40px);
   transition: transform 0.5s ease, box-shadow 0.35s ease, background 0.35s ease;
-}
-
-.team-card p {
-  text-transform: none;
-  color: var(--text-color);
 }
 
 .team-card:hover {
@@ -125,19 +134,40 @@
 }
 
 /* Member Info */
+/* Member Name (FIXED height, 2-line clamp, no stretching) */
 .team-card h4 {
   font-size: 1.3rem;
   margin: 0.6rem 0;
   color: var(--heading-color);
   font-weight: 600;
   text-transform: uppercase;
+
+  /* Prevent long names from stretching card */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;         /* max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*min-height: 3.2rem;            /* keeps height uniform for 2 lines */
+
+  line-height: 1.5rem;
 }
 
+
+/* Role text (optional clamp) */
 .team-card p {
   font-size: 1rem;
   color: var(--text-color);
   margin-bottom: 1.2rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1;      /* only 1 line */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 1.2rem;         /* keeps alignment uniform */
 }
+
 
 /* Social Links */
 .social-links {
@@ -173,6 +203,15 @@
     padding: 3rem 1rem;
   }
 
+  .team-card {
+    flex: 1 1 100%; 
+  }
+
+  .team-card p {
+    margin: auto;
+    margin-bottom: 1.2rem;
+  }
+
   .section-heading {
     font-size: 2rem;
   }
@@ -181,4 +220,19 @@
     width: 140px;
     height: 140px;
   }
+}
+/*Placeholders styling*/
+
+.skeleton-card {
+  width: 100%;
+  height: 260px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 14px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
 }

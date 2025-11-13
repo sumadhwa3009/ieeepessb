@@ -14,8 +14,10 @@ export default function Events() {
       {/* Upcoming Events */}
       <section className={styles.section}>
         <h2 className={styles["section-title"]}>Upcoming Events</h2>
-        <div className={styles["events-grid"]}>
-          {/* Event Card 1 */}
+        <p>Something powerful is charging up... Stay tuned!</p>
+
+        {/*<div className={styles["events-grid"]}>
+          {/* Event Card 1 }
           <div className={`${styles["event-card"]} glass-card`}>
             <h2>Technical Talk on Renewable Energy</h2>
             <p className={styles["event-date"]}>📅 September 10, 2025</p>
@@ -28,7 +30,7 @@ export default function Events() {
             </a>
           </div>
 
-          {/* Event Card 2 */}
+          {/* Event Card 2 }
           <div className={`${styles["event-card"]} glass-card`}>
             <h2>Workshop: AI in Power Systems</h2>
             <p className={styles["event-date"]}>📅 October 5, 2025</p>
@@ -41,7 +43,7 @@ export default function Events() {
             </a>
           </div>
 
-          {/* Event Card 3 */}
+          {/* Event Card 3 }
           <div className={`${styles["event-card"]} glass-card`}>
             <h2>PES Hackathon</h2>
             <p className={styles["event-date"]}>📅 November 15–16, 2025</p>
@@ -52,8 +54,9 @@ export default function Events() {
             <a href="#" className="btn">
               Register
             </a>
-          </div>
-        </div>
+          </div> 
+           
+        </div> */}
       </section>
 
       {/* Past Events */}
@@ -62,32 +65,49 @@ export default function Events() {
         <div className={styles["events-grid"]}>
           {/* Past Event 1 */}
           <div className={styles["past-event-card"]}>
-            <h3>Energy Awareness Drive</h3>
-            <p className={styles["event-date"]}>📅 March 15, 2025</p>
+            <h3>Watt Next</h3>
+            <p className={styles["event-date"]}>📅 October 25, 2025</p>
             <p>
-              A community outreach event educating students about energy
-              conservation and sustainability.
+              A technical conclave 2025 - a meetup of innovators, creators and
+              tech lovers shaping the future!{" "}
             </p>
           </div>
 
-          {/* Past Event 2 */}
+          {/* Past Event 2*/}
           <div className={styles["past-event-card"]}>
-            <h3>Smart Grid Symposium</h3>
-            <p className={styles["event-date"]}>📅 January 20, 2025</p>
+            <h3>Kill Switch</h3>
+            <p className={styles["event-date"]}>📅 October 24, 2025</p>
             <p>
-              Expert speakers discussed innovations in smart grids and future
-              challenges.
+              Flip the switch, Catch the glitch - A thrilling mystery - solving
+              challenge -- one murder with endless secrets
             </p>
           </div>
 
           {/* Past Event 3 */}
           <div className={styles["past-event-card"]}>
             <h3>Intro to IEEE PES</h3>
-            <p className={styles["event-date"]}>📅 October 5, 2024</p>
+            <p className={styles["event-date"]}>📅 September 25, 2025</p>
             <p>
               Orientation session for new members to understand IEEE PES goals
               and opportunities.
             </p>
+          </div>
+
+          {/* Past Event 4 */}
+          <div className={styles["past-event-card"]}>
+            <h3>EmpowerEd</h3>
+            <p className={styles["event-date"]}>📅 September 05, 2025</p>
+            <p>
+              A community outreach event educating students about Renewable
+              Energy Sources, Robotics and Artificial Intelligence.
+            </p>
+          </div>
+
+          {/* Past Event 5 */}
+          <div className={styles["past-event-card"]}>
+            <h3>Outreach Programme - 1</h3>
+            <p className={styles["event-date"]}>📅 October 5, 2025</p>
+            <p>A community outreach event educating students</p>
           </div>
         </div>
       </section>
