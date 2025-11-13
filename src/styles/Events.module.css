@@ -13,6 +13,12 @@
   color: var(--primary-color);
 }
 
+.section p {
+  text-align: center;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
 /* Events Grid */
 .events-grid {
   display: grid;

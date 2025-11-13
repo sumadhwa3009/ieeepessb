@@ -353,3 +353,71 @@ select:focus {
     margin: 0.4rem 0;
   }
 }
+
+
+/*REGISTRATION CLOSED UI */
+
+/*.closedWrapper {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}*/
+
+.closedMessage {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+  
+  margin-top: 2rem;
+  padding: 2.5rem;
+  border-radius: 16px;
+
+  /* Your exact glass-card style replicated */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+  color: var(--text-color);
+  animation: fadeIn 0.6s ease;
+}
+
+.closedMessage h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.closedMessage p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .closedWrapper {
+    padding: 3rem 1.5rem;
+  }
+
+  .closedMessage {
+    padding: 1.8rem;
+  }
+
+  .closedMessage h2 {
+    font-size: 1.5rem;
+  }
+
+  .closedMessage p {
+    font-size: 0.9rem;
+  }
+}
+
