@@ -175,7 +175,7 @@ public/
 
 ## Deployment (How to Deploy the site globally)
 
-### 1️⃣ **Build Project**
+### 1️ **Build Project**
 
 ```bash
 npm run build
@@ -183,13 +183,13 @@ npm run build
 
 It will create or modify the **dist** folder (Do not try to modify this)
 
-### 2️⃣ **Deploy to Firebase**
+### 2️ **Deploy to Firebase**
 
 ```bash
 firebase deploy
 ```
 
-### 3️⃣ **Add to GitHub **
+### 3️ **Add to GitHub **
 
 ```bash
 git checkout -b feature-name
