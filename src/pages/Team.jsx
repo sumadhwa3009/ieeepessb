@@ -17,7 +17,7 @@ export default function Team() {
     const loadMembers = async () => {
       try {
         // Query members collection (order by timestamp if exists)
-        const q = query(collection(db, "members"), orderBy("timestamp", "asc"));
+        const q = query(collection(db, "members26"), orderBy("timestamp", "asc"));
         const snapshot = await getDocs(q);
         const members = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 

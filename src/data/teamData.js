@@ -10,10 +10,10 @@ const getImage = (filename) => teamImages[`../assets/team/${filename}`];
 const teamData = {
   facultyAdvisor: [
     {
-      name: "DR. SUMA UMESH",
+      name: "DR. PRASHANT ATHAVALE",
       role: "Faculty Advisor",
       image: getImage("faculty.jpg"),
-      socials: { linkedin: "#", instagram: "#" },
+      socials: { email: "prashanth@bmsit.in" },
     },
   ],
   executiveCommittee: [

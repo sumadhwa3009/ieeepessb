@@ -25,10 +25,14 @@ export default function Navbar() {
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.navWrap}>
         {/* Brand */}
-        <div className={styles.brand}>
+        <NavLink
+          to="/"
+          className={styles.brand}
+          onClick={() => setMenuOpen(false)}
+        >
           <img src="/images/ieee-pes-logo.png" alt="pes_logo_bmsitm" />
           <h3>IEEE PES BMSIT&M</h3>
-        </div>
+        </NavLink>
 
         {/* Hamburger Toggle */}
         <div
@@ -43,7 +47,7 @@ export default function Navbar() {
         {/* Navigation */}
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
           <ul>
-            {["Home", "About", "Events", "Team", "Contact"].map((item) => (
+            {["Home", "About", "Events", "Gallery", "Team", "Contact"].map((item) => (
               <li key={item}>
                 <NavLink
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

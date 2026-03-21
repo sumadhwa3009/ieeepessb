@@ -8,22 +8,22 @@ import imageCompression from "browser-image-compression";
 
 export default function MemberRegistration() {
   const navigate = useNavigate();
-  const FORM_OPEN = false;  // set to FALSE to stop entries or TRUE to enable form entries
+  const FORM_OPEN = false; // set to FALSE to stop entries or TRUE to enable form entries
 
   if (!FORM_OPEN) {
     return (
       <main className={styles.closedWrapper}>
         <section className="hero small-hero">
-        <div className="hero-content">
-          <h1>Member Registration</h1>
-          <p>Join the IEEE PES Student Branch Chapter today!</p>
-        </div>
-      </section>
+          <div className="hero-content">
+            <h1>Member Registration</h1>
+            <p>Join the IEEE PES Student Branch Chapter today!</p>
+          </div>
+        </section>
 
         <div className={styles.closedMessage}>
           <h2>🔒 Registration Closed</h2>
           <p>
-            Thank you for your interest! Registration for this cycle has now been
+            Thank you for your interest! Registration for this term has now been
             closed. Please check back here soon.
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function MemberRegistration() {
 
     try {
       const options = {
-        maxSizeMB: 0.4,
+        maxSizeMB: 1.0,
         maxWidthOrHeight: 1024,
         useWebWorker: true,
       };
@@ -106,7 +106,7 @@ export default function MemberRegistration() {
       const compressedFile = await imageCompression(formData.photo, options);
       const photoURL = await uploadToCloudinary(compressedFile);
 
-      await addDoc(collection(db, "members"), {
+      await addDoc(collection(db, "members26"), {
         fullName: formData.fullName,
         email: formData.email,
         phone: formData.phone,
@@ -140,7 +140,7 @@ export default function MemberRegistration() {
       <section className="hero small-hero">
         <div className="hero-content">
           <h1>Member Registration</h1>
-          <p>Join the IEEE PES Student Branch Chapter today!</p>
+          <p>Have a Wonderful Year at IEEE PES Student Branch Chapter!</p>
         </div>
       </section>
 
@@ -304,7 +304,7 @@ export default function MemberRegistration() {
               <label className={styles.termsLabel}>
                 <input type="checkbox" id="agreeTerms" required /> I agree to
                 the
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href="https://tinyurl.com/4d8r89zt" target="_blank" rel="noopener noreferrer">
                   Terms and Condition
                 </a>
                 of the society. I affirm that all details furnished are true and

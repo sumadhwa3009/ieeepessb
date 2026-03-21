@@ -3,7 +3,7 @@ import { Parser } from "json2csv";
 import admin from "firebase-admin";
 import serviceAccount from "./serviceAccountKey.json" with { type: "json" };
 
-// Initialize Firebase Admin SDK
+// Initialize Admin SDK
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
@@ -11,31 +11,23 @@ admin.initializeApp({
 const db = admin.firestore();
 
 async function exportToCSV() {
-  try {
-    const collectionRef = db.collection("members");
-    const snapshot = await collectionRef.get();
+  const snapshot = await db.collection("members26").get();
 
-    if (snapshot.empty) {
-      console.log("⚠️ No documents found in 'members' collection.");
-      return;
-    }
-
-    // Prepare data
-    const data = snapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
-
-    // Convert to CSV
-    const parser = new Parser();
-    const csv = parser.parse(data);
-
-    // Write to file
-    fs.writeFileSync("registrations.csv", csv);
-    console.log("✅ Exported to registrations.csv successfully!");
-  } catch (err) {
-    console.error("❌ Error exporting Firestore data:", err);
+  if (snapshot.empty) {
+    console.log("⚠️ No documents found");
+    return;
   }
+
+  const data = snapshot.docs.map(doc => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
+
+  const parser = new Parser();
+  const csv = parser.parse(data);
+
+  fs.writeFileSync("members26.csv", csv);
+  console.log("✅ CSV exported successfully");
 }
 
-exportToCSV();
+exportToCSV().catch(console.error);

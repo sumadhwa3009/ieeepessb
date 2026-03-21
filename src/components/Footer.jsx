@@ -25,13 +25,13 @@ export default function Footer() {
           </p>
           <p>
             Mobile: {"\u00A0"}
-            <a href="tel:+918747004877"> +91 8747004877</a> (Chair)
+            <a href="tel:+919513331788"> +91 9513331788</a> (Chair)
             <br />
             {"\u2003"}
             {"\u2003"}
             {"\u2003"}
             {"\u2003"}
-            <a href="tel:+918296098776">+91 8296098776</a> (Secretary)
+            <a href="tel:+919113679843">+91 9113679843</a> (Secretary)
           </p>
         </div>
         <div className={styles.faddress}>

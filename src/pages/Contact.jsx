@@ -62,8 +62,8 @@ export default function Contact() {
               </a>
             </p>
             <p>
-              <a href="tel:+918747004877">
-                <i className="fas fa-phone"></i> +91 8747004877
+              <a href="tel:+919513331788">
+                <i className="fas fa-phone"></i> +91 9513331788
               </a>
             </p>
           </div>

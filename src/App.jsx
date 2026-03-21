@@ -8,6 +8,8 @@ import Team from "./pages/Team.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import MemberRegistration from "./pages/MemberRegistration.jsx";
+import Gallery from "./pages/Gallery";
+
 
 export default function App() {
   return (
@@ -18,6 +20,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/member-registration" element={<MemberRegistration />} />
